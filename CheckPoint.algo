@@ -1,0 +1,21 @@
+VAR str: STRING;
+VAR num_char, num_word := 1, num_vow := 0, i, j, k: INTEGER;
+
+BEGIN
+    num_char := str.length;
+    FOR i FROM 0 TO num_char-1 STEP 1 DO
+        IF (str[i] = ' ' OR str[i] = '.') THEN
+            num_word := num_word + 1;
+        END_IF
+        IF (str[i] = str[].toLower() AND str[i] NOT ' ' AND str[i] NOT '.') THEN
+            num_vow := num_vow + 1;
+        END_IF
+    END_FOR
+
+    write("La longueur de la chaine est: ");
+    read(num_char);
+    write("Le nombre des mots dans la chaine est: ");
+    read(num_word);
+    write("Le nombre de voyelle dans la chaine est: ");
+    read(num_vow);
+END
